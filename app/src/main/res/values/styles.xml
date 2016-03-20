@@ -4,14 +4,14 @@
   <style name="AppTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
     <item name="colorPrimary">@android:color/black</item>
     <item name="colorPrimaryDark">@android:color/black</item>
-    <item name="android:textColorPrimary">@color/color_of_shit</item>
-    <item name="colorAccent">@color/color_of_shit</item>
-    <item name="android:textColorPrimaryInverse">@color/color_of_shit</item>
-    <item name="actionMenuTextColor">@color/color_of_shit</item>
-    <item name="android:textColorSecondary">@color/color_of_shit</item>
+    <item name="android:textColorPrimary">@color/color_of_communism</item>
+    <item name="colorAccent">@color/color_of_communism</item>
+    <item name="android:textColorPrimaryInverse">@color/color_of_communism</item>
+    <item name="actionMenuTextColor">@color/color_of_communism</item>
+    <item name="android:textColorSecondary">@color/color_of_communism</item>
     <item name="android:windowBackground">@android:color/white</item>
     <item name="android:windowContentOverlay">@null</item>
-    <item name="colorButtonNormal">@color/color_of_shit</item>
+    <item name="colorButtonNormal">@color/color_of_communism</item>
   </style>
 
 </resources>

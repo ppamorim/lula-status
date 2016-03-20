@@ -13,16 +13,9 @@
 * See the License for the specific language governing permissions and
 * limitations under the License.
 */
-package com.lula.domain.interactor;
+package com.lula.util;
 
-import com.lula.domain.model.Lula;
-import com.lula.domain.model.Quotation;
-
-public interface LulaInteractor {
-  void execute(Callback callback);
-  interface Callback {
-    void onSuccessLoad(Lula lula);
-    void onSuccessMoneyLoad(Quotation quotation);
-    void onErrorLoad();
-  }
+public class Tags {
+  public static final String LULA = "Lula";
+  public static final String QUOTATION = "Quotation";
 }

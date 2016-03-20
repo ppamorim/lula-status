@@ -21,44 +21,44 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class Lula implements Parcelable {
+public class Quotation implements Parcelable {
 
-  public static final Parcelable.Creator<Lula> CREATOR
-      = new Parcelable.Creator<Lula>() {
-    public Lula createFromParcel(Parcel in) {
-      return new Lula(in);
+  public static final Parcelable.Creator<Quotation> CREATOR
+      = new Parcelable.Creator<Quotation>() {
+    public Quotation createFromParcel(Parcel in) {
+      return new Quotation(in);
     }
-    public Lula[] newArray(int size) {
-      return new Lula[size];
+    public Quotation[] newArray(int size) {
+      return new Quotation[size];
     }
   };
 
-  @JsonField(name = "arrested") private boolean arrested;
-  @JsonField(name = "arrested") private boolean minister;
+  @JsonField(name = "dolar") private QuotationStatus dollar;
+  @JsonField(name = "euro") private QuotationStatus euro;
 
-  public Lula() {
+  public Quotation() {
     super();
   }
 
-  public Lula(Parcel in) {
-    this.arrested = in.readInt() > 0;
-    this.minister = in.readInt() > 0;
+  public Quotation(Parcel in) {
+    this.dollar = in.readParcelable(QuotationStatus.class.getClassLoader());
+    this.euro = in.readParcelable(QuotationStatus.class.getClassLoader());
   }
 
-  public boolean isArrested() {
-    return arrested;
+  public QuotationStatus getDollar() {
+    return dollar;
   }
 
-  public void setArrested(boolean arrested) {
-    this.arrested = arrested;
+  public void setDollar(QuotationStatus dollar) {
+    this.dollar = dollar;
   }
 
-  public boolean isMinister() {
-    return minister;
+  public QuotationStatus getEuro() {
+    return euro;
   }
 
-  public void setMinister(boolean minister) {
-    this.minister = minister;
+  public void setEuro(QuotationStatus euro) {
+    this.euro = euro;
   }
 
   @Override public int describeContents() {
@@ -66,8 +66,8 @@ public class Lula implements Parcelable {
   }
 
   @Override public void writeToParcel(Parcel parcel, int i) {
-    parcel.writeInt(arrested ? 1 : 0);
-    parcel.writeInt(minister ? 1 : 0);
+    parcel.writeParcelable(dollar, i);
+    parcel.writeParcelable(euro, i);
   }
 
 }

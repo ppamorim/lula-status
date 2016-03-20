@@ -21,44 +21,44 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class Lula implements Parcelable {
+public class QuotationStatus implements Parcelable {
 
-  public static final Parcelable.Creator<Lula> CREATOR
-      = new Parcelable.Creator<Lula>() {
-    public Lula createFromParcel(Parcel in) {
-      return new Lula(in);
+  public static final Parcelable.Creator<Quotation> CREATOR
+      = new Parcelable.Creator<Quotation>() {
+    public Quotation createFromParcel(Parcel in) {
+      return new Quotation(in);
     }
-    public Lula[] newArray(int size) {
-      return new Lula[size];
+    public Quotation[] newArray(int size) {
+      return new Quotation[size];
     }
   };
 
-  @JsonField(name = "arrested") private boolean arrested;
-  @JsonField(name = "arrested") private boolean minister;
+  @JsonField(name = "cotacao") private Float quotation;
+  @JsonField(name = "variacao") private Float variation;
 
-  public Lula() {
+  public QuotationStatus() {
     super();
   }
 
-  public Lula(Parcel in) {
-    this.arrested = in.readInt() > 0;
-    this.minister = in.readInt() > 0;
+  public QuotationStatus(Parcel in) {
+    this.quotation = in.readFloat();
+    this.variation = in.readFloat();
   }
 
-  public boolean isArrested() {
-    return arrested;
+  public Float getVariation() {
+    return variation;
   }
 
-  public void setArrested(boolean arrested) {
-    this.arrested = arrested;
+  public void setVariation(Float variation) {
+    this.variation = variation;
   }
 
-  public boolean isMinister() {
-    return minister;
+  public Float getQuotation() {
+    return quotation;
   }
 
-  public void setMinister(boolean minister) {
-    this.minister = minister;
+  public void setQuotation(Float quotation) {
+    this.quotation = quotation;
   }
 
   @Override public int describeContents() {
@@ -66,8 +66,8 @@ public class Lula implements Parcelable {
   }
 
   @Override public void writeToParcel(Parcel parcel, int i) {
-    parcel.writeInt(arrested ? 1 : 0);
-    parcel.writeInt(minister ? 1 : 0);
+    parcel.writeFloat(quotation);
+    parcel.writeFloat(variation);
   }
 
 }

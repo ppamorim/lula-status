@@ -1,9 +1,11 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:gravity="center_vertical">
 
   <TextView
+      android:id="@+id/arrested_title"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:padding="16dp"
@@ -17,11 +19,13 @@
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:gravity="center_horizontal"
-      android:textColor="@color/color_of_shit"
+      android:textColor="@color/color_of_communism"
+      android:textSize="24sp"
       android:padding="16dp"
       android:visibility="gone"/>
 
   <TextView
+      android:id="@+id/minister_title"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:padding="16dp"
@@ -35,33 +39,36 @@
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:gravity="center_horizontal"
-      android:textColor="@color/color_of_shit"
+      android:textColor="@color/color_of_communism"
+      android:textSize="24sp"
       android:padding="16dp"
       android:visibility="gone"/>
 
-  <FrameLayout
-      android:id="@+id/fallback_view"
+  <TextView
+      android:id="@+id/quotation"
       android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      android:visibility="gone">
+      android:layout_height="wrap_content"
+      android:gravity="center_horizontal"
+      android:textColor="@color/color_of_communism"
+      android:textSize="12sp"
+      android:padding="16dp"
+      android:visibility="gone"/>
 
-    <ProgressBar
-        android:id="@+id/progress_bar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:visibility="gone"/>
+  <ProgressBar
+      android:id="@+id/progress_bar"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      android:visibility="gone"/>
 
-    <Button
-        android:id="@+id/try_again"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_gravity="center"
-        android:text="@string/try_again"
-        android:textColor="@android:color/white"
-        android:visibility="gone"/>
-
-  </FrameLayout>
+  <Button
+      android:id="@+id/try_again"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:gravity="center"
+      android:layout_gravity="center"
+      android:text="@string/try_again"
+      android:textColor="@android:color/white"
+      android:visibility="gone"/>
 
 </LinearLayout>

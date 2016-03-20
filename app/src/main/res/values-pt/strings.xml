@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">Lula Status</string>
+
+  <string name="arrested">Ele está preso?</string>
+  <string name="minister">Ele é ministro?</string>
+
+  <string name="yes">Sim</string>
+  <string name="no">Não</string>
+
+  <string name="try_again">Tente novamente</string>
+
+  <string name="quotation">Dolar: %1$s Euro: %2$s</string>
+
+</resources>

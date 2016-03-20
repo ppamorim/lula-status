@@ -1,12 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="app_name">Lula Status</string>
 
-  <string name="arrested">Arrested</string>
-  <string name="minister">Minister</string>
+  <string name="arrested">is he arrested?</string>
+  <string name="minister">is he minister?</string>
 
   <string name="yes">Yes</string>
   <string name="no">No</string>
 
   <string name="try_again">Try again</string>
+
+  <string name="quotation">Dollar: %1$s Euro: %2$s</string>
 
 </resources>
