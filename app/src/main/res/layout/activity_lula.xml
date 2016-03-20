@@ -8,7 +8,7 @@
       android:id="@+id/arrested_title"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:padding="16dp"
+      android:padding="@dimen/padding"
       android:gravity="center_horizontal"
       android:textColor="@android:color/black"
       android:text="@string/arrested"
@@ -21,14 +21,14 @@
       android:gravity="center_horizontal"
       android:textColor="@color/color_of_communism"
       android:textSize="24sp"
-      android:padding="16dp"
+      android:padding="@dimen/padding"
       android:visibility="gone"/>
 
   <TextView
       android:id="@+id/minister_title"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:padding="16dp"
+      android:padding="@dimen/padding"
       android:gravity="center_horizontal"
       android:textColor="@android:color/black"
       android:text="@string/minister"
@@ -41,7 +41,7 @@
       android:gravity="center_horizontal"
       android:textColor="@color/color_of_communism"
       android:textSize="24sp"
-      android:padding="16dp"
+      android:padding="@dimen/padding"
       android:visibility="gone"/>
 
   <TextView
@@ -51,7 +51,7 @@
       android:gravity="center_horizontal"
       android:textColor="@color/color_of_communism"
       android:textSize="12sp"
-      android:padding="16dp"
+      android:padding="@dimen/padding"
       android:visibility="gone"/>
 
   <ProgressBar

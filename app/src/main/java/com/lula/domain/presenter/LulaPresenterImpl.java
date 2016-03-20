@@ -83,6 +83,7 @@ public class LulaPresenterImpl implements LulaPresenter {
   }
 
   private void notifySuccess(Quotation quotation) {
+    this.quotation = quotation;
     if (view.isReady()) {
       view.showMoney(quotation);
     }
